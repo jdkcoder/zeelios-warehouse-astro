@@ -60,6 +60,15 @@
             @media (min-width: 1536px) {
                 @apply text-xl;
             }
+
+            svg {
+                .main-stop {
+                    stop-color: red;
+                }
+                .alt-stop {
+                    stop-color: green;
+                }
+            }
         }
     }
 }

@@ -48,7 +48,7 @@
 
         strong {
             @apply text-5xl;
-            background: linear-gradient(90.91deg, #79c0ff -24.67%, #d2a8ff 53.55%);
+            background: linear-gradient(0deg, #ff4e00 0%, #ec9f05 74%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -83,67 +83,5 @@
         @apply absolute top-[50%] right-24 uppercase whitespace-nowrap flex flex-col items-center w-max;
         transform: translate(0, -50%);
         letter-spacing: 1px;
-
-        .auth-form {
-            @apply hidden;
-
-            @media (min-width: 1024px) {
-                @apply h-max w-max rounded-lg flex flex-col gap-12 py-8 px-12;
-                backdrop-filter: blur(16px) saturate(180%);
-                -webkit-backdrop-filter: blur(16px) saturate(180%);
-                background: linear-gradient(
-                    90.91deg,
-                    hsla(208, 100%, 74%, 0.15) -24.67%,
-                    hsla(269, 100%, 83%, 0.15) 53.55%
-                );
-                border-radius: 12px;
-            }
-
-            .auth-change {
-                @apply flex items-center justify-center gap-8;
-
-                button {
-                    @apply uppercase pb-1 font-semibold text-lg;
-                    color: var(--clr, #fff);
-                    border-color: var(--clr, #fff);
-
-                    &.active {
-                        @apply border-b-2;
-
-                        --clr: #b4ccff;
-                    }
-                }
-            }
-
-            .auth-inputs {
-                @apply flex flex-col h-full justify-center gap-8;
-                input {
-                    @apply border-b-2 rounded-lg py-2 px-4;
-
-                    &:focus {
-                        &::placeholder {
-                            transition: all 0.25s ease-in-out;
-                            opacity: 0;
-                        }
-                    }
-                    &::placeholder {
-                        color: rgb(227, 227, 227);
-                        transition: all 0.25s ease-in-out;
-                    }
-                }
-                button {
-                    background: #b186df;
-                    @apply rounded-md py-2.5 uppercase text-lg font-semibold;
-                    letter-spacing: 1px;
-                    transition: all 0.25s ease-in-out;
-
-                    &:hover {
-                        background: #926bbc;
-                        letter-spacing: 2px;
-                        transition: all 0.25s ease-in-out;
-                    }
-                }
-            }
-        }
     }
 }

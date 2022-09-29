@@ -9,6 +9,6 @@
 import Partner from '../../assets/svg/partners.svg'
 </script>
 
-<style  lang='scss'>
-
+<style lang='scss'>
+@import './contact-btn';
 </style>

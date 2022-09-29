@@ -36,7 +36,7 @@ nav {
         &.active {
             @apply border-b-4;
 
-            border-color: #c187ff;
+            border-color: #ec9f05;
         }
     }
 
@@ -58,23 +58,18 @@ nav {
     }
 
     ul {
-        @apply flex items-center gap-2 uppercase h-full;
+        @apply flex items-center space-x-6 uppercase h-full;
 
         li {
             --border-clr: transparent;
-            --bg: transparent;
-            @apply h-full grid place-items-center border-b-4 px-2;
+            @apply h-full grid place-items-center border-b-4 px-2 cursor-pointer;
 
             border-color: var(--border-clr);
-            background: var(--bg);
             transition: border-color 0.4s ease-in-out, background 0.25s ease-in-out;
 
-            &:hover {
-                --bg: #84aafb;
-            }
 
             &.active {
-                --border-clr: #ad75ea;
+                --border-clr: #ec9f05;
             }
         }
 

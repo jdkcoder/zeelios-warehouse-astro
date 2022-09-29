@@ -1,0 +1,48 @@
+button.contact {
+    --radius: 50%;
+    --width: 3.5rem;
+    --o: 0;
+    --pe: none;
+    --bg: transparent;
+    --invert: 1;
+    @apply relative mx-auto text-center border-2 px-2 py-2 uppercase;
+
+    background: var(--bg);
+    border-radius: var(--radius);
+    width: var(--width);
+    transition: background 0.25s ease-in-out, width 0.25s ease-in-out, border-radius 0.25s ease-in-out 0.25s;
+
+    &:hover {
+        --radius: 0.5rem;
+        --width: 11rem;
+        --o: 1;
+        --pe: auto;
+        --bg: #fff;
+        transition: border-radius 0.25s ease-in-out, background 0.25s ease-in-out 0.2s, width 0.25s ease-in-out 0.2s;
+
+        span {
+            transition: opacity 0.25s ease-in-out 0.35s;
+        }
+
+        svg {
+            filter: invert(0);
+            transition: all 0.4s ease-in-out;
+        }
+    }
+
+    span {
+        @apply absolute top-1/2 right-2  whitespace-nowrap font-semibold;
+
+        transform: translateY(calc(-50% + 1px));
+        opacity: var(--o);
+        color: #000;
+        pointer-events: var(--pe);
+        transition: opacity 0.4s ease-in-out;
+    }
+
+    svg {
+        @apply h-9 w-9;
+        filter: invert(1);
+        transition: all 0.4s ease-in-out;
+    }
+}

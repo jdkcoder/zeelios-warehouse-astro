@@ -20,7 +20,7 @@
             &.active {
                 @apply border-b-2;
 
-                --clr: #b4ccff;
+                --clr: #ec9f05;
             }
         }
     }
@@ -42,13 +42,13 @@
             }
         }
         button {
-            background: #b186df;
+            background: #ec9f05;
             @apply rounded-md py-2.5 uppercase text-lg font-semibold;
             letter-spacing: 1px;
             transition: all 0.25s ease-in-out;
 
             &:hover {
-                background: #926bbc;
+                background: #ff4e00;
                 letter-spacing: 2px;
                 transition: all 0.25s ease-in-out;
             }
