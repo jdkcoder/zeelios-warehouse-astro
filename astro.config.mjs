@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config';
-import image from "@astrojs/image";
 import svgLoader from 'vite-svg-loader';
 import vue from "@astrojs/vue";
 
@@ -12,5 +11,6 @@ export default defineConfig({
     integrations: true,
     reactivityTransform: true,
   },
-  integrations: [image(), vue({ reactivityTransform: true })]
+  integrations: [
+    vue({ reactivityTransform: true })]
 });

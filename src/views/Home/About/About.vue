@@ -3,7 +3,7 @@
         <h1>About Us</h1>
         <div id="about-content">
             <div class="about-img">
-                <img src="https://i.imgur.com/JvQovu6.png" alt="" />
+                <img src="https://i.imgur.com/JvQovu6.png" alt="About Zeelios Warehouse" />
             </div>
 
             <div class="about-texts">
