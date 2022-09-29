@@ -23,7 +23,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="/pricing">Bảng giá</a>
+                    <a href="/bang-gia">Bảng giá</a>
                 </li>
             </ul>
         </div>
