@@ -56,7 +56,7 @@
     </aside>
 </template>
 
-<script setup scoped>
+<script setup>
 import { onMounted } from 'vue'
 import MenuIcon from '../../assets/svg/menu.svg'
 let scrollPosition = $ref(0)

@@ -1,3 +1,7 @@
+
+<style lang='scss'>
+@import './auth-form';
+</style>
 <template>
     <div class="auth-form">
         <div class="auth-change">
@@ -15,10 +19,3 @@
         </div>
     </div>
 </template>
-
-<script setup>
-</script>
-
-<style lang='scss'>
-@import './auth-form';
-</style>

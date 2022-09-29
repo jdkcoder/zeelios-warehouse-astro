@@ -1,3 +1,8 @@
+
+<style lang="scss">
+@import './hero-img';
+</style>
+    
 <script setup>
 import Dollar from '../../../assets/svg/dollar.svg'
 import AuthForm from '../AuthForm/AuthForm.vue'
@@ -29,6 +34,3 @@ import AuthForm from '../AuthForm/AuthForm.vue'
         </div>
     </section>
 </template>
-<style lang="scss">
-@import './hero-img';
-</style>

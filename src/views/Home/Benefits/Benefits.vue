@@ -1,3 +1,7 @@
+
+<style lang='scss'>
+@import './benefits';
+</style>
 <template>
     <section id="benefits">
         <h1>Why Us?</h1>
@@ -25,7 +29,3 @@ import AutoPay from '../../../assets/svg/auto-pay.svg';
 import Support from '../../../assets/svg/support-24h.svg';
 import LowPrice from '../../../assets/svg/low-price.svg';
 </script>
-
-<style lang='scss'>
-@import './benefits';
-</style>

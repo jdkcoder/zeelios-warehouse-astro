@@ -1,3 +1,7 @@
+
+<style  lang='scss'>
+@import './about';
+</style>
 <template>
     <section id="about">
         <h1>About Us</h1>
@@ -50,7 +54,3 @@ import Telegram from '../../../assets/svg/telegram.svg'
 import Mail from '../../../assets/svg/mail.svg'
 import Location from '../../../assets/svg/location.svg'
 </script>
-
-<style  lang='scss'>
-@import './about';
-</style>
