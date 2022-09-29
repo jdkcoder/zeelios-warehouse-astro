@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigations from '../components/Navigations/Navigations.vue';
+import ContactBtn from '../components/ContactBtn/ContactBtn.vue';
+import HeroImg from '../views/Home/HeroImg/HeroImg.vue';
+import Services from '../views/Home/Services/Services.vue';
+import About from '../views/Home/About/About.vue';
+import Benefits from '../views/Home/Benefits/Benefits.vue'
+import Steps from '../views/Home/Steps/Steps.vue'
+import Payments from '../views/Home/Payments/Payments.vue'
+let title = `Zeelios Warehouse - Mua hộ, dịch vụ kho uy tín chuyên vận chuyển hàng hoá từ Mỹ`;
+---
+
+<Layout title={title}>
+	<Navigations client:load />
+	<main>
+		<HeroImg client:visible />
+		<Services client:visible />
+		<ContactBtn client:visible />
+		<About client:visible />
+		<Benefits client:visible />
+		<Steps client:visible />
+		<Payments client:visible />
+	</main>
+</Layout>

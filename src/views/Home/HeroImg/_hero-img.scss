@@ -1,0 +1,149 @@
+#hero-img {
+    --blur: 4px;
+    @apply w-full h-full min-h-screen relative;
+
+    -webkit-mask-image: var(--mask);
+    mask-image: var(--mask);
+
+    &:hover {
+        --blur: 0;
+    }
+
+    img {
+        @apply object-cover object-center h-full min-h-screen w-full pointer-events-none select-none;
+
+        filter: brightness(var(--brn)) blur(var(--blur));
+        transition: all 0.4s ease-in-out;
+    }
+
+    svg {
+        @apply h-12 w-12;
+        filter: invert(1);
+        transition: all 0.4s ease-in-out;
+    }
+
+    .content-left {
+        @apply absolute top-1/2 left-1/2 uppercase;
+
+        transform: translate(-50%, -50%);
+        letter-spacing: 1px;
+        filter: brightness(0.95);
+
+        @media (min-width: 1024px) {
+            @apply left-12;
+
+            transform: translate(0, -50%);
+        }
+        @media (min-width: 1536px) {
+            @apply left-24;
+        }
+
+        p {
+            @apply font-extralight text-4xl mb-1;
+
+            @media (min-width: 768px) {
+                @apply text-8xl;
+            }
+        }
+
+        strong {
+            @apply text-5xl;
+            background: linear-gradient(90.91deg, #79c0ff -24.67%, #d2a8ff 53.55%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            // text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+
+            @media (min-width: 768px) {
+                @apply text-9xl;
+            }
+        }
+    }
+
+    .content-center {
+        @apply absolute top-[25%] left-1/2 uppercase whitespace-nowrap flex flex-col items-center w-max;
+        transform: translate(-50%, -50%);
+        letter-spacing: 1px;
+
+        @media (min-width: 1536px) {
+            @apply top-[50%];
+        }
+
+        #dollar-conversion {
+            @apply hidden;
+
+            @media (min-width: 1536px) {
+                @apply flex flex-col gap-2 items-center justify-center;
+            }
+        }
+    }
+
+    .content-right {
+        @apply absolute top-[50%] right-24 uppercase whitespace-nowrap flex flex-col items-center w-max;
+        transform: translate(0, -50%);
+        letter-spacing: 1px;
+
+        .auth-form {
+            @apply hidden;
+
+            @media (min-width: 1024px) {
+                @apply h-max w-max rounded-lg flex flex-col gap-12 py-8 px-12;
+                backdrop-filter: blur(16px) saturate(180%);
+                -webkit-backdrop-filter: blur(16px) saturate(180%);
+                background: linear-gradient(
+                    90.91deg,
+                    hsla(208, 100%, 74%, 0.15) -24.67%,
+                    hsla(269, 100%, 83%, 0.15) 53.55%
+                );
+                border-radius: 12px;
+            }
+
+            .auth-change {
+                @apply flex items-center justify-center gap-8;
+
+                button {
+                    @apply uppercase pb-1 font-semibold text-lg;
+                    color: var(--clr, #fff);
+                    border-color: var(--clr, #fff);
+
+                    &.active {
+                        @apply border-b-2;
+
+                        --clr: #b4ccff;
+                    }
+                }
+            }
+
+            .auth-inputs {
+                @apply flex flex-col h-full justify-center gap-8;
+                input {
+                    @apply border-b-2 rounded-lg py-2 px-4;
+
+                    &:focus {
+                        &::placeholder {
+                            transition: all 0.25s ease-in-out;
+                            opacity: 0;
+                        }
+                    }
+                    &::placeholder {
+                        color: rgb(227, 227, 227);
+                        transition: all 0.25s ease-in-out;
+                    }
+                }
+                button {
+                    background: #b186df;
+                    @apply rounded-md py-2.5 uppercase text-lg font-semibold;
+                    letter-spacing: 1px;
+                    transition: all 0.25s ease-in-out;
+
+                    &:hover {
+                        background: #926bbc;
+                        letter-spacing: 2px;
+                        transition: all 0.25s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}

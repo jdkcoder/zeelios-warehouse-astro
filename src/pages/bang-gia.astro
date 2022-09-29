@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigations from '../components/Navigations/Navigations.vue';
+
+import SearchBoxPricing from '../views/Pricing/SearchBox/SearchBoxPricing.vue';
+import PricingTable from '../views/Pricing/PricingTable/PricingTable.vue';
+
+let title = `Zeelios Warehouse - Bảng giá mua hộ, vận chuyển hàng từ Mỹ`;
+---
+
+<Layout title={title}>
+  <Navigations client:load />
+  <main>
+    <section id='pricing'>
+      <h1>Bảng giá dịch vụ</h1>
+      <h2>Cước phí phụ thu</h2>
+      <SearchBoxPricing client:visible />
+      <PricingTable client:visible />
+    </section>
+  </main>
+</Layout>
+<style lang='scss'>
+  @import '../views/Pricing/_pricing-page.scss';
+</style>

@@ -1,0 +1,28 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="description" content="Zeelios Warehouse - Dịch vụ mua hộ và vận chuyển hàng hoá từ Mỹ uy tín, đáng tin cậy, nhanh nhất Việt Nam"/>
+    	<meta name="keywords" content="zeelios, zeelios warehouse, dịch vụ mua hộ, mua hàng từ Mỹ, mua hàng amazon, dịch vụ vận chuyển, đặt hàng từ Mỹ về Việt Nam"/>
+    	<meta property="og:locale" content="en_US"/>
+   		<meta property="og:type" content="website"/>
+    	<meta property="og:title" content="Zeelios Warehouse - Dịch vụ mua hộ, dịch vụ kho uy tín chuyên vận chuyển hàng hoá từ Mỹ"/>
+    	<meta property="og:description" content="Mua hộ và vận chuyển hàng hoá từ Mỹ uy tín, đáng tin cậy, nhanh nhất Việt Nam"/>
+    	<meta property="og:url" content="https://warehouse.zeelios.com"/>
+    	<meta property="og:site_name" content="Zeelios Warehouse"/>
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>

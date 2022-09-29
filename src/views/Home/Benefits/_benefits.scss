@@ -1,0 +1,65 @@
+#benefits {
+    @apply grid text-white mt-16;
+
+    h1 {
+        @apply mx-auto w-max text-center text-2xl font-bold;
+
+        @media (min-width: 768px) {
+            @apply text-3xl;
+        }
+
+        @media (min-width: 1024px) {
+            @apply text-4xl;
+        }
+    }
+
+    svg {
+        @apply h-10 w-10;
+        filter: invert(1);
+
+        @media (min-width: 1024px) {
+            @apply h-14 w-14;
+        }
+    }
+
+    #benefits-list {
+        @apply grid gap-4 px-4 py-2 mt-8;
+
+        @media (min-width: 375px) {
+            @apply px-6;
+        }
+
+        @media (min-width: 600px) {
+            @apply px-8 grid-cols-2;
+        }
+
+        @media (min-width: 1280px) {
+            @apply px-8 grid-cols-4 gap-6;
+        }
+
+        div {
+            @apply flex items-center gap-4 p-2 text-sm rounded-md font-semibold;
+            background: rgb(14, 14, 14);
+
+            @media (min-width: 375px) {
+                @apply p-4;
+            }
+
+            @media (min-width: 768px) {
+                @apply p-8 text-base;
+            }
+
+            @media (min-width: 1024px) {
+                @apply gap-6 text-lg;
+            }
+
+            @media (min-width: 1280px) {
+                @apply justify-center;
+            }
+
+            @media (min-width: 1536px) {
+                @apply text-xl;
+            }
+        }
+    }
+}

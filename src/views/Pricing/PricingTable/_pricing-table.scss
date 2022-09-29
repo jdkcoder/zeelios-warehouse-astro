@@ -1,0 +1,88 @@
+table {
+    border-collapse: collapse;
+    @apply rounded-md mt-8 mx-auto;
+    background: #2b2b34;
+    max-width: 1000px;
+
+    thead {
+        @apply text-left;
+
+        tr {
+            --columns: 2rem 1fr 6rem;
+            @apply h-max py-4 grid whitespace-nowrap text-center;
+            grid-auto-flow: column;
+            grid-template-columns: var(--columns);
+            background: transparent !important;
+            border-bottom: 2px solid #000;
+
+            @media (min-width: 768px) {
+                --columns: 3rem 1fr 8rem;
+            }
+
+            @media (min-width: 1024px) {
+                --columns: 4rem 1fr 8rem;
+            }
+
+            th {
+                @apply grid place-items-center text-xs;
+
+                @media (min-width: 768px) {
+                    @apply text-sm;
+                }
+            }
+        }
+    }
+
+    tbody {
+        @apply block overflow-hidden overflow-y-auto;
+
+        max-height: 38rem;
+
+        &::-webkit-scrollbar {
+            @apply h-0 w-0;
+        }
+
+        tr {
+            --columns: 2rem 1fr 6rem;
+            @apply grid;
+
+            grid-auto-flow: column;
+            grid-template-columns: var(--columns);
+            height: var(--height, max-content);
+
+            @media (min-width: 768px) {
+                --columns: 3rem 1fr 8rem;
+            }
+
+            @media (min-width: 1024px) {
+                --columns: 4rem 1fr 8rem;
+            }
+
+            &:nth-child(odd) {
+                background: #2e2f3a;
+            }
+
+            td {
+                border-right: 2px solid #000000;
+                @apply p-4 text-sm;
+
+                @media (min-width: 768px) {
+                    @apply text-base;
+                }
+
+                &:first-child,
+                &:last-child {
+                    @apply grid place-items-center h-full p-0;
+                }
+
+                &:last-child {
+                    border-right: none;
+                }
+
+                &:nth-child(2) {
+                    @apply flex flex-col justify-center;
+                }
+            }
+        }
+    }
+}

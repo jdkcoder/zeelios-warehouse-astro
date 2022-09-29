@@ -1,0 +1,20 @@
+h1 {
+    @apply mx-auto w-max text-center text-2xl font-bold mt-16;
+
+    @media (min-width: 768px) {
+        @apply text-3xl;
+    }
+
+    @media (min-width: 1024px) {
+        @apply text-4xl;
+    }
+}
+
+#payment-gateways {
+    @apply flex items-center gap-8 justify-center p-8;
+
+    svg {
+        @apply h-12;
+        filter: brightness(0.5);
+    }
+}

@@ -1,0 +1,168 @@
+#about {
+    @apply relative text-center mt-16;
+
+    svg {
+        @apply h-4 w-4;
+
+        filter: invert(1);
+    }
+
+    h1 {
+        @apply text-2xl font-bold mb-6;
+
+        @media (min-width: 768px) {
+            @apply hidden;
+        }
+    }
+
+    #about-content {
+        --o: 1;
+        --s: 0.9;
+        @apply relative grid grid-cols-1;
+        height: 450px;
+        max-height: 450px;
+
+        @media (min-width: 768px) {
+            @apply grid-cols-2;
+        }
+
+        .about-img {
+            @apply relative h-full w-full pointer-events-none select-none;
+            max-height: 450px;
+
+            &::before {
+                @apply hidden;
+
+                @media (min-width: 768px) {
+                    content: "About Us";
+                    @apply absolute inset-0 grid place-items-center text-3xl font-bold rounded-lg uppercase;
+                    background: rgba(0, 0, 0, 0.7);
+                    opacity: var(--o);
+                    transform: scale(var(--s));
+                    transition: opacity 0.6s ease-in-out, transform 0.4s ease-in-out 0.1s;
+                }
+
+                @media (min-width: 1024px) {
+                    @apply text-4xl;
+                }
+
+                @media (min-width: 1280px) {
+                    @apply text-5xl;
+                }
+
+                @media (min-width: 1536px) {
+                    @apply text-6xl;
+                }
+            }
+
+            img {
+                @apply h-full w-full object-cover object-center;
+            }
+        }
+
+        .about-texts {
+            --s: calc(100%);
+            @apply absolute top-1/2 left-1/2 bottom-0 flex flex-col justify-center;
+
+            height: var(--s);
+            width: var(--s);
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+
+            @media (min-width: 768px) {
+                @apply relative w-full h-full;
+
+                border-radius: unset;
+                top: unset;
+                left: unset;
+                transform: unset;
+                background: url("https://i.imgur.com/pLFLaXJ.jpg") no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+
+            #contacts {
+                @apply hidden;
+
+                @media (min-width: 768px) {
+                    @apply flex flex-col items-center text-lg;
+                    grid-template-areas: "phone" "telegram" "mail";
+                }
+
+                @media (min-width: 1024px) {
+                    @apply text-xl flex-row justify-around;
+
+                    svg {
+                        @apply h-6 w-6;
+                    }
+                }
+
+                li {
+                    @apply grid;
+                    grid-template-columns: 3rem min-content;
+                    grid-auto-rows: min-content min-content;
+
+                    p {
+                        @apply p-0 mb-0 text-xs text-left font-extralight;
+                    }
+
+                    strong {
+                        @apply text-sm;
+
+                        @media (min-width: 1024px) {
+                            @apply text-base;
+                        }
+                    }
+
+                    svg {
+                        @apply mx-auto my-auto;
+                    }
+                }
+
+                .phone {
+                    grid-area: phone;
+                }
+
+                .telegram {
+                    grid-area: telegram;
+                }
+
+                .mail {
+                    grid-area: mail;
+                }
+            }
+
+            #location {
+                @apply hidden items-center justify-center gap-4 mt-20 text-base;
+
+                span {
+                    @apply font-normal;
+                }
+            }
+        }
+
+        p {
+            @apply h-max grid gap-0 p-4;
+
+            @media (min-width: 375px) {
+                @apply p-8;
+            }
+
+            strong {
+                @apply text-2xl;
+
+                @media (min-width: 768px) {
+                    @apply text-3xl;
+                }
+            }
+        }
+
+        span {
+            @apply font-light mt-4;
+            letter-spacing: 0.5px;
+            line-height: 1.7;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+#tutorial {
+    @apply grid text-white mt-16;
+
+    h1 {
+        @apply hidden;
+
+        @media (min-width: 820px) {
+            @apply block mx-auto w-max text-center text-3xl font-bold mb-4;
+        }
+
+        @media (min-width: 1024px) {
+            @apply text-4xl;
+        }
+    }
+
+    #steps-container {
+        --columns: 1fr 40vw;
+        @apply grid;
+
+        @media (min-width: 375px) {
+            grid-template-columns: var(--columns);
+        }
+
+        @media (min-width: 1280px) {
+            --columns: 1fr;
+        }
+
+        #image {
+            @apply hidden;
+
+            @media (min-width: 375px) {
+                @apply block w-full h-full overflow-hidden;
+
+                img {
+                    @apply w-full h-full object-cover object-center;
+
+                    filter: brightness(0.8);
+                }
+            }
+
+            @media (min-width: 1280px) {
+                @apply hidden;
+            }
+        }
+
+        #steps {
+            @apply flex flex-col justify-center gap-4 text-base p-8 whitespace-nowrap;
+            background: url("https://i.imgur.com/pLFLaXJ.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            @media (min-width: 1280px) {
+                @apply flex-row justify-center gap-6;
+
+                background: unset;
+            }
+
+            @media (min-width: 1280px) {
+                @apply gap-6 text-center;
+            }
+
+            li {
+                @media (min-width: 1280px) {
+                    @apply flex-1 rounded-md px-8 py-4 cursor-pointer;
+
+                    transition: all 0.25s ease-in-out;
+                    box-shadow: var(--box-shadow);
+                    background: rgb(14, 14, 14);
+                }
+
+                &:hover {
+                    --box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 8px 0px;
+                }
+
+                &:first-child {
+                    @apply w-max mx-auto;
+
+                    @media (min-width: 820px) {
+                        @apply hidden;
+                    }
+                }
+
+                &::before {
+                    content: attr(step);
+                    @apply mr-2 font-bold text-xl pointer-events-none;
+
+                    background: linear-gradient(90.91deg, #79c0ff -24.67%, #d2a8ff 53.55%);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                span {
+                    @apply font-semibold;
+
+                    @media (min-width: 820px) {
+                        @apply text-lg;
+                    }
+                }
+            }
+        }
+    }
+}

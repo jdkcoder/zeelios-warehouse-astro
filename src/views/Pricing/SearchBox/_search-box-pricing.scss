@@ -1,0 +1,12 @@
+#search-box {
+    @apply mt-4 flex flex-col justify-center items-center gap-2;
+
+    p {
+        @apply text-lg font-thin;
+    }
+
+    input {
+        max-width: 400px;
+        @apply border-2 rounded-md px-4 py-2 w-full bg-transparent;
+    }
+}

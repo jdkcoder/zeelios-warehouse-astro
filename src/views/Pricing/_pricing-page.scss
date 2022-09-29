@@ -1,0 +1,11 @@
+#pricing {
+    @apply pt-32 flex flex-col px-4 pb-20;
+
+    h1 {
+        @apply mx-auto text-3xl font-bold uppercase;
+    }
+
+    h2 {
+        @apply text-xl font-semibold mt-8 w-max mx-auto;
+    }
+}

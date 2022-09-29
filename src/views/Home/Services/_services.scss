@@ -1,0 +1,106 @@
+#services {
+    @apply relative py-4 px-2 text-center mb-4;
+
+    @media (min-width: 375px) {
+        @apply px-4;
+    }
+
+    @media (min-width: 768px) {
+        @apply px-8;
+    }
+
+    @media (min-width: 1024px) {
+        @apply px-8;
+    }
+
+    @media (min-width: 1280px) {
+        @apply px-16;
+    }
+
+    @media (min-width: 1536px) {
+        @apply px-24;
+    }
+
+    h2 {
+        @apply text-2xl font-bold;
+
+        @media (min-width: 768px) {
+            @apply text-3xl;
+        }
+
+        @media (min-width: 1024px) {
+            @apply text-4xl;
+        }
+    }
+
+    #services-content {
+        @apply mt-8 grid gap-4;
+
+        @media (min-width: 768px) {
+            @apply grid grid-cols-2;
+        }
+
+        @media (min-width: 1280px) {
+            @apply grid-cols-4 gap-8;
+        }
+
+        .service-card {
+            --blur: 0;
+            --o: 1;
+            --ls: 0;
+            --y: 0;
+            @apply rounded-lg p-4 grid gap-4 w-full h-max;
+
+            background: hsla(0, 0%, 14%, 0.4);
+            grid-template-rows: min-content min-content 1fr;
+            box-shadow: var(--box-shadow);
+            transform: translateY(var(--y));
+            transition: all 0.25s ease-in-out;
+
+            @media (min-width: 768px) {
+                @apply h-full;
+            }
+
+            &:hover {
+                --o: 0.3;
+                --ls: 2px;
+                --y: -0.75rem;
+                --box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 8px 0px;
+                transition: all 0.25s ease-in-out, transform 0.4s ease-in-out;
+                cursor: pointer;
+            }
+
+            &.coming {
+                --blur: 2px;
+                opacity: 0.5;
+                filter: var(--blur);
+                cursor: not-allowed;
+
+                &:hover {
+                    --y: 0;
+                    --ls: 0;
+                    --o: 1;
+                }
+            }
+
+            svg {
+                @apply mx-auto h-16 mb-4 self-center;
+                filter: invert(1);
+                transition: all 0.25s ease-in-out;
+            }
+
+            .title {
+                @apply mx-auto text-xl font-semibold uppercase mb-2;
+                letter-spacing: var(--ls);
+                transition: all 0.25s ease-in-out;
+            }
+
+            p {
+                span {
+                    @apply font-light text-center;
+                    color: lightgrey;
+                }
+            }
+        }
+    }
+}
