@@ -1,9 +1,17 @@
 ---
+import { Spa } from "astro-spa";
+
 export interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+let progressBarOptions = {
+	height: ".25rem",
+	colors: {
+    foreground: "linear-gradient(90deg, #ff4e00 0%, #ec9f05 100%)",
+	},
+}
 ---
 
 <!DOCTYPE html>
@@ -23,5 +31,6 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<slot />
+		<Spa defaultAnimation={false} progressBar={true} scrollIntoView={true} progressBarOptions={progressBarOptions}/>
 	</body>
 </html>
