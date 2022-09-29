@@ -75,6 +75,5 @@ onMounted(() => {
 </script>
 
 <style lang='scss'>
-@import '../../assets/styles/app.scss';
 @import './nav';
 </style>
